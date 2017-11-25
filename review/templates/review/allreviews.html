@@ -1,0 +1,17 @@
+{% extends "pizzas/base.html" %}
+{% block content %}
+
+<h2> Average : {{reviews.average.rating__avg}} / 5</h2>
+<ul class="list-group">
+ {% for reviews in reviews.reviews %}
+    <li class="list-group-item">{{reviews.review}} </br>
+       Rating: <strong>{{reviews.rating}}</strong> </br> {{reviews.date_added}}</li>
+
+ {% empty %}
+<li>No reviews have been added yet.</li>
+ {% endfor %}
+ </ul>
+
+
+
+{% endblock content %}

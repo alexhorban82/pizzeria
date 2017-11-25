@@ -1,0 +1,7 @@
+{% extends "pizzas/base.html" %}
+{% block content %}
+<h2>Thanks for The Rating</h2>
+<p>{{result}}</p>
+Click <a href="{% url 'review:allreviews' %}">Here</a> to view Ratings
+
+{% endblock content %}
